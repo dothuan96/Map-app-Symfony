@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Map phase 1</title>
+    </head>
+    <body onload="init_map()">
+      <h2>PHASE 1</h2>
+
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      {{ form_end(form) }}
+
+      <div id="map" style="overflow: auto; width:100%; height: 400px;"></div>
+
+      <!-- JavaScript to show google map -->
+      <script type="text/javascript">
+          function init_map() {
+              var myOptions = {
+                  zoom: 14,
+                  center: new google.maps.LatLng({{latitude}}, {{longitude}}),
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+              map = new google.maps.Map(document.getElementById("map"), myOptions);
+              //marker symbol
+              //Customize marker: https://developers.google.com/maps/documentation/javascript/custom-markers
+              marker = new google.maps.Marker({
+                  map: map,
+                  position: new google.maps.LatLng({{latitude}}, {{longitude}}),
+                  icon: '{{icon}}'
+              });
+              infowindow = new google.maps.InfoWindow({
+                  content: '{{formatted_address}} <br> {{latitude}}, {{longitude}}'
+              });
+              google.maps.event.addListener(marker, "click", function () {
+                  infowindow.open(map, marker);
+              });
+              infowindow.open(map, marker);
+          }
+      </script>
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDHWtcGs715gxpECvPWPT69FZUSajsM-6w"></script>
+    </body>
+</html>

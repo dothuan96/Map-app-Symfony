@@ -20,6 +20,14 @@
 - Run sever: `php bin/console server:run`
 - `http://localhost:8000/`
 
+## Database
+
+In order to user code for database, you should:
+- [Create a database and database table](https://developers.google.com/maps/documentation/javascript/info-windows-to-db)
+- Put file `phase4_addrow.php` and `phase4_info.php` to your server
+- Change the user information in file `phase4_info.php`
+- Change the url to your server url
+
 Contact: Developer: Do Thuan
 Email: dov.thuan96@gmail.com
 Git: https://github.com/dothuan96/

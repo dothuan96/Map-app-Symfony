@@ -1,11 +1,11 @@
 # Map-app-Symfony
 
-This Map application include some google map function that allows user:
-- Geocoding a location by address that user input and mark it
-- Change the marker to others custom one and change it color
-- Find direction between 2 loation and calculate its distance
-- Allow user add some infomation for specific location and save to database (MySQL)
-The project is coded based on PHP language and Symfony 4 framework.  
+- This Map application include some google map function that allows user:
+  + Geocoding a location by address that user input and mark it
+  + Change the marker to others custom one and change it color
+  + Find direction between 2 loation and calculate its distance
+  + Allow user add some infomation for specific location and save to database (MySQL)
+- The project is coded based on PHP language and Symfony 4 framework.  
 
 ## Install
 
